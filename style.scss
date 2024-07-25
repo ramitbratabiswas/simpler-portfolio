@@ -86,15 +86,6 @@ a:hover {
   border-radius: 8px;
 }
 
-.section-tiles-box {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(3, 1fr);
-  border-radius: 8px;
-  overflow-x: scroll;
-  box-shadow: 0px 0px -10px rgba(0, 0, 0, 1);
-}
-
 .section-header {
   font-size: clamp(30px, 3vw, 60px);
   font-weight: 400;
@@ -129,7 +120,6 @@ a:hover {
 .section-textbox-list-item {
   padding: 2px;
 }
-
 
 .section-text {
   padding: clamp(8px, 0.8vw, 16px);
@@ -168,7 +158,8 @@ a:hover {
 }
 
 .proj-tiles {
-  width: 100vw;
+  width: fit-content;
+  overflow-x: scroll;
 }
 
 .proj-1 {
@@ -185,6 +176,63 @@ a:hover {
 
 .proj-4 {
   grid-column: 4 / 5;
+}
+
+.proj-box {
+  display: flex;
+}
+
+.section-tiles-box {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  border-radius: 8px;
+  overflow-x: scroll;
+  box-shadow: 0px 0px -10px rgba(0, 0, 0, 1);
+}
+
+.proj {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  min-height: fit-content;
+  max-width: 80vw;
+  overflow-x: scroll;
+}
+
+.proj-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35vw;
+  margin-right: 5vw;
+}
+
+.proj-footer {
+  font-size: medium;
+  display: flex;
+  justify-content: space-between;
+  width: 12vw;
+  margin: 0;
+  margin-top: -10px;
+}
+
+.mkp-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 8px;
+}
+
+.mkp-img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease;
+}
+
+.mkp-img:hover {
+  filter: brightness(0.8);
 }
 
 #intro {
@@ -214,6 +262,39 @@ a:hover {
   font-weight: 200;
   opacity: 0.8;
 }
+
+.img1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  width: 25vw;
+  height: auto;
+}
+
+.img2 {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  width: 25vw;
+  height: auto;
+}
+
+.img3 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  width: 25vw;
+  height: auto;
+}
+
+.img4 {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  width: 25vw;
+  height: auto;
+}
+
+
+
+
+
 
 :root {
   --color-bg1: rgb(0, 0, 0);
