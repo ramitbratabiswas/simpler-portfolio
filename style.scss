@@ -3,6 +3,10 @@
 @import "./proj";
 @import "./misc";
 
+* {
+  border: solid 2px red;
+}
+
 html, body {
   background-color: black;
   font-family: 'DM Sans', sans-serif;
@@ -133,7 +137,6 @@ a:hover {
   border-radius: 8px;
   padding: 50px;
   box-shadow: 0 2px 2px rgba(248, 246, 246, 0.6);
-  height: 40vh;
   scrollbar-color: white;
   z-index: 5;
 }
@@ -141,6 +144,8 @@ a:hover {
 
 .section-tiles-box {
   display: grid;
+  border: blue 2px solid;
+  width: 80vw;
   gap: 10px;
   grid-template-columns: 1fr;
   border-radius: 8px;
