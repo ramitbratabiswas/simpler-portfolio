@@ -92,6 +92,7 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   border-radius: 8px;
   overflow-x: scroll;
+  box-shadow: 0px 0px -10px rgba(0, 0, 0, 1);
 }
 
 .section-header {
@@ -182,6 +183,7 @@ a:hover {
   margin: 0 0 -10px 0;
   font-weight: 400;
   opacity: 1;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
 
 .smaller-text {
