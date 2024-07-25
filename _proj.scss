@@ -1,0 +1,69 @@
+.proj-tiles {
+  width: fit-content;
+  overflow-x: scroll;
+}
+
+.proj-1 {
+  grid-column: 1 / 2;
+}
+
+.proj-2 {
+  grid-column: 2 / 3;
+}
+
+.proj-3 {
+  grid-column: 3 / 4;
+}
+
+.proj-4 {
+  grid-column: 4 / 5;
+}
+
+.proj-box {
+  display: flex;
+}
+
+.proj {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  min-height: fit-content;
+  max-width: 80vw;
+  overflow-x: scroll;
+  border-radius: 8px;
+}
+
+.proj-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35vw;
+  margin-right: 5vw;
+}
+
+.proj-footer {
+  font-size: medium;
+  display: flex;
+  justify-content: space-between;
+  width: 12vw;
+  margin: 0;
+  margin-top: -10px;
+}
+
+.mkp-img-container, .bsu-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 8px;
+}
+
+.mkp-img, .mac-img, .bsu-img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease;
+}
+
+.mkp-img:hover, .mac-img:hover, .bsu-img:hover {
+  filter: brightness(0.8);
+}
