@@ -198,6 +198,7 @@ a:hover {
   min-height: fit-content;
   max-width: 80vw;
   overflow-x: scroll;
+  border-radius: 8px;
 }
 
 .proj-info {
@@ -217,21 +218,21 @@ a:hover {
   margin-top: -10px;
 }
 
-.mkp-img-container {
+.mkp-img-container, .bsu-img-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 8px;
 }
 
-.mkp-img {
+.mkp-img, .mac-img, .bsu-img {
   border-radius: 8px;
   width: 100%;
   height: auto;
   transition: all 0.2s ease;
 }
 
-.mkp-img:hover {
+.mkp-img:hover, .mac-img:hover, .bsu-img:hover {
   filter: brightness(0.8);
 }
 
