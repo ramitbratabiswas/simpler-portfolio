@@ -4,7 +4,7 @@
 @import "./misc";
 
 * {
-  border: solid 2px red;
+  // border: solid 2px red;
 }
 
 html, body {
@@ -71,7 +71,7 @@ a {
   transition: all 0.2s ease;
 }
 
-a:hover {
+a:not(.tile-link):hover {
   font-weight: 500;
 }
 
