@@ -1,8 +1,12 @@
 html, body {
+  background-color: black;
   font-family: 'DM Sans', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-size: large;
+  font-weight: 200;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,7 +18,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   display: flex;
   flex-direction: row;
@@ -23,11 +27,12 @@ body {
   height: 8%;
   padding: 1rem;
   z-index: 3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-list {
   list-style: none;
-  display: flex; /* Ensures list items are in a row */
+  display: flex;
   padding: 0;
   margin: 0;
 }
@@ -40,10 +45,25 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  font-weight: 500;
 }
 
 .section {
@@ -57,15 +77,90 @@ body {
 }
 
 .section-box {
-  width: 70vw;
-  min-height: 80%;
-  padding: 5vw;
-  margin: 10vw;
-  display: flex;
-  flex-direction: column;
+  width: 80vw;
+  min-height: 60vh;
+  padding: 5vw; 
+  margin: 5vw;
   background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 1px rgba(248, 246, 246, 0.6);
   border-radius: 8px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+}
+
+.section-tiles-box {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 8px;
+  overflow-x: scroll;
+}
+
+.section-header {
+  font-size: clamp(30px, 3vw, 60px);
+  font-weight: 400;
+  margin: -5px 0 20px 0;
+}
+
+.section-textbox-header {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: clamp(20px, 2vw, 36px);
+  font-weight: 400;
+}
+
+.section-textbox-subheader {
+  margin: 0;
+  font-size: clamp(12px, 1.6vw, 20px);
+  font-weight: 300;
+}
+
+.section-textbox-time {
+  margin: 5px 0 0 0;
+  font-size: clamp(12px, 1.6vw, 20px);
+  font-weight: 200;
+  font-style: italic;
+}
+
+.section-textbox-list {
+  list-style: none;
+  padding: 0px;
+}
+
+.section-textbox-list-item {
+  padding: 2px;
+}
+
+
+.section-text {
+  padding: clamp(8px, 0.8vw, 16px);
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 2px;
+  border-radius: 8px;
+  padding: 50px;
+  box-shadow: 0 2px 2px rgba(248, 246, 246, 0.6);
+  width: 22vw;
+  height: 40vh;
+  scrollbar-color: white;
+  z-index: 5;
+}
+
+.exp-1 {
+  grid-column: 1 / 2;
+}
+
+.exp-2 {
+  grid-column: 2 / 3;
+}
+
+.exp-3 {
+  grid-column: 3 / 4;
+}
+
+.exp-4 {
+  grid-column: 4 / 5;
+}
+
+.exp-5 {
+  grid-column: 5 / 6;
 }
 
 #intro {
@@ -85,13 +180,13 @@ body {
 .massive-text {
   font-size: clamp(80px, 8vw, 160px);
   margin: 0 0 -10px 0;
-  font-weight: 800;
+  font-weight: 400;
   opacity: 1;
 }
 
 .smaller-text {
   font-size: clamp(20px, 2vw, 40px);
-  font-weight: 400;
+  font-weight: 200;
   opacity: 0.8;
 }
 
