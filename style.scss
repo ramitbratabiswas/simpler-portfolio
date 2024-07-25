@@ -138,10 +138,13 @@ a:hover {
   border-radius: 8px;
   padding: 50px;
   box-shadow: 0 2px 2px rgba(248, 246, 246, 0.6);
-  width: 22vw;
   height: 40vh;
   scrollbar-color: white;
   z-index: 5;
+}
+
+.exp-tiles {
+  width: 22vw;
 }
 
 .exp-1 {
@@ -162,6 +165,26 @@ a:hover {
 
 .exp-5 {
   grid-column: 5 / 6;
+}
+
+.proj-tiles {
+  width: 100vw;
+}
+
+.proj-1 {
+  grid-column: 1 / 2;
+}
+
+.proj-2 {
+  grid-column: 2 / 3;
+}
+
+.proj-3 {
+  grid-column: 3 / 4;
+}
+
+.proj-4 {
+  grid-column: 4 / 5;
 }
 
 #intro {

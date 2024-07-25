@@ -23,17 +23,26 @@ document.addEventListener('DOMContentLoaded', function () {
   const links = document.querySelectorAll('.navbar a');
 
   links.forEach(link => {
-    link.addEventListener('click', function (event) {
+    link.addEventListener('click', function (this: HTMLAnchorElement, event: Event) {
       event.preventDefault();
 
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement: HTMLElement | null = document.getElementById(targetId);
+      const href = this.getAttribute('href');
+      if (href) {
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        } else {
+          console.error(`Element with id ${targetId} not found.`);
+        }
+      } else {
+        console.error('No href attribute found.');
       }
     });
   });
 });
+
+
