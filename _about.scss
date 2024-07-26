@@ -1,0 +1,28 @@
+.about-content {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  overflow: scroll;
+  max-height: calc(32vw + 8px);
+  gap: 5vw;
+}
+
+.about-text {
+  min-width: 36vw;
+}
+
+.about-footer {
+  font-size: medium;
+}
+
+.about-images {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.about-image {
+  border-radius: 8px;
+  width: 16vw;
+}
